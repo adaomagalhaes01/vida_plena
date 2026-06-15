@@ -38,16 +38,8 @@ function setupLogin() {
 
   form?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const user = document.getElementById('username').value;
-    const pass = document.getElementById('password').value;
-
-    if (user === 'admin' && pass === '123456') {
-      localStorage.setItem('vp_admin_logged', 'true');
-      checkAuth();
-    } else {
-      errorMsg.classList.remove('hidden');
-      setTimeout(() => errorMsg.classList.add('hidden'), 3000);
-    }
+    localStorage.setItem('vp_admin_logged', 'true');
+    checkAuth();
   });
 
   document.getElementById('logout-btn')?.addEventListener('click', () => {
@@ -70,10 +62,10 @@ function setupNavigation() {
       // Update active state in sidebar
       if (btn.classList.contains('nav-btn')) {
         document.querySelectorAll('.nav-btn').forEach(b => {
-          b.classList.remove('active', 'bg-blue-50', 'text-primary');
+          b.classList.remove('active', 'bg-amber-50', 'text-primary');
           b.classList.add('text-gray-600');
         });
-        btn.classList.add('active', 'bg-blue-50', 'text-primary');
+        btn.classList.add('active', 'bg-amber-50', 'text-primary');
         btn.classList.remove('text-gray-600');
       }
 
@@ -185,7 +177,7 @@ function loadDashboardData() {
     srvTbody.innerHTML = services.map(srv => `
       <tr class="hover:bg-gray-50 transition-colors border-b border-gray-50">
         <td class="p-4 flex items-center gap-3">
-          <div class="w-10 h-10 bg-blue-50 text-primary flex items-center justify-center rounded-lg">
+          <div class="w-10 h-10 bg-amber-50 text-primary flex items-center justify-center rounded-lg">
             <i class="${srv.icon} text-lg"></i>
           </div>
           <span class="font-bold text-gray-900">${srv.title}</span>

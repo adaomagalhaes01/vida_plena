@@ -1,57 +1,48 @@
 export const mockPsychologists = [
   {
     id: 1,
-    name: "Dra. Filipa Mendes",
+    name: "Ana Domingos",
     specialty: "Psicologia Clínica",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/Ana_Domingos.jpeg",
     availability: "Seg - Sex, 09:00 - 18:00",
     rating: 4.9,
     reviews: 124
   },
   {
     id: 2,
-    name: "Dr. João Silva",
-    specialty: "Desenvolvimento Pessoal",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    name: "Cristina Anibal",
+    specialty: "Psicologia Educacional",
+    image: "/Cristina_Anibal.jpeg",
     availability: "Ter - Sab, 10:00 - 19:00",
     rating: 4.8,
     reviews: 98
   },
   {
     id: 3,
-    name: "Dra. Mariana Costa",
-    specialty: "Saúde Sexual",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    name: "Evalina Sonia",
+    specialty: "Terapia Familiar",
+    image: "/Evalina_Sonia.jpeg",
     availability: "Seg - Qui, 08:00 - 16:00",
     rating: 5.0,
     reviews: 215
   },
   {
     id: 4,
-    name: "Dr. Tiago Santos",
+    name: "Jandira Vunge",
     specialty: "Ansiedade e Depressão",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    image: "/Jandira_Vunge.jpeg",
     availability: "Seg - Sex, 13:00 - 21:00",
     rating: 4.7,
     reviews: 156
   },
   {
     id: 5,
-    name: "Dra. Inês Almeida",
-    specialty: "Apoio Universitário",
-    image: "https://images.unsplash.com/photo-1594824436951-7f12bc10a501?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    name: "Joana Modesto",
+    specialty: "Desenvolvimento Pessoal",
+    image: "/Joana_Modesto.jpeg",
     availability: "Seg - Sex, 09:00 - 17:00",
     rating: 4.9,
     reviews: 112
-  },
-  {
-    id: 6,
-    name: "Dr. Ricardo Neves",
-    specialty: "Terapia de Casais",
-    image: "https://images.unsplash.com/photo-1537368910025-702800d11586?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-    availability: "Qua - Dom, 10:00 - 20:00",
-    rating: 4.8,
-    reviews: 87
   }
 ];
 
@@ -77,14 +68,14 @@ export const mockServices = [
   {
     id: 4,
     icon: "ph-heart",
-    title: "DST e HIV",
-    description: "Acompanhamento psicológico especializado em saúde sexual e prevenção."
+    title: "Terapia Familiar",
+    description: "Acompanhamento psicológico especializado focado nas dinâmicas familiares."
   },
   {
     id: 5,
     icon: "ph-graduation-cap",
-    title: "Coaching Académico",
-    description: "Orientação para sucesso nos estudos e gestão do stress universitário."
+    title: "Psicologia Educacional",
+    description: "Orientação para o sucesso nos estudos e gestão do stress no ambiente escolar e universitário."
   },
   {
     id: 6,
@@ -97,12 +88,6 @@ export const mockServices = [
     icon: "ph-trend-up",
     title: "Desenvolvimento Pessoal",
     description: "Ferramentas para atingir objetivos, melhorar a autoestima e liderança."
-  },
-  {
-    id: 8,
-    icon: "ph-books",
-    title: "Consultoria Universitária",
-    description: "Ajuda na transição para o mercado de trabalho e escolhas de carreira."
   }
 ];
 
@@ -112,14 +97,14 @@ export const mockTestimonials = [
     name: "Ana Silva",
     role: "Estudante Universitária",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-    content: "O apoio que recebi durante a minha época de exames foi fundamental. A equipa da Vida Plena 4.0 ensinou-me a gerir a ansiedade de forma eficaz. Recomendo muito!"
+    content: "O apoio que recebi durante a minha época de exames foi fundamental. A equipa da Vida Plena ensinou-me a gerir a ansiedade de forma eficaz. Recomendo muito!"
   },
   {
     id: 2,
     name: "Carlos Mendes",
     role: "Empreendedor",
     image: "https://randomuser.me/api/portraits/men/32.jpg",
-    content: "Como empreendedor, a pressão é constante. As sessões online com o meu psicólogo ajudaram-me a encontrar um equilíbrio saudável entre a vida pessoal e profissional."
+    content: "Como empreendedor, a pressão é constante. As sessões online com a minha psicóloga ajudaram-me a encontrar um equilíbrio saudável entre a vida pessoal e profissional."
   },
   {
     id: 3,
@@ -139,12 +124,12 @@ export const mockFaq = [
   {
     id: 2,
     question: "Quais são os métodos de pagamento aceites?",
-    answer: "Aceitamos MBWay, Referência Multibanco, Cartão de Crédito e Transferência Bancária. O pagamento deve ser realizado até 24 horas antes da consulta para confirmar a sua marcação."
+    answer: "Aceitamos Multicaixa Express e Transferência Bancária. O pagamento deve ser realizado até 24 horas antes da consulta para confirmar a sua marcação."
   },
   {
     id: 3,
-    question: "O serviço de Saúde Sexual garante confidencialidade?",
-    answer: "Absolutamente. Todos os nossos serviços são pautados pelo mais estrito sigilo profissional. No caso da Saúde Sexual, oferecemos um ambiente livre de julgamentos para tratar qualquer questão relacionada."
+    question: "Garantem confidencialidade?",
+    answer: "Absolutamente. Todos os nossos serviços são pautados pelo mais estrito sigilo profissional, oferecendo um ambiente livre de julgamentos para tratar qualquer questão relacionada."
   },
   {
     id: 4,

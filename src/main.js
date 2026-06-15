@@ -1,13 +1,7 @@
 import { mockPsychologists, mockServices, mockTestimonials, mockFaq } from './data.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize AOS
-  AOS.init({
-    once: true,
-    offset: 50,
-    duration: 800,
-    easing: 'ease-out-cubic',
-  });
+  // AOS removed for performance
 
   // Setup UI components
   setupNavbar();
@@ -71,8 +65,8 @@ function renderServices() {
   mockServices.forEach((service, index) => {
     const delay = (index % 4) * 100;
     html += `
-      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:-translate-y-2 hover:shadow-xl hover:shadow-blue-900/5 hover:border-blue-100 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="${delay}">
-        <div class="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300">
+      <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:-translate-y-2 hover:shadow-xl hover:shadow-amber-900/5 hover:border-amber-100 transition-all duration-300 group">
+        <div class="w-16 h-16 bg-amber-50 text-primary rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-300">
           <i class="${service.icon}"></i>
         </div>
         <h3 class="text-xl font-bold mb-3 text-gray-900">${service.title}</h3>
@@ -114,7 +108,7 @@ function renderPsychologists() {
           </div>
           <p class="text-gray-500 text-sm mb-4"><i class="ph ph-clock mr-1"></i> ${psy.availability}</p>
           <div class="mt-auto pt-4 border-t border-gray-100">
-            <button class="open-modal-btn w-full py-3 text-primary font-bold bg-blue-50 rounded-xl hover:bg-primary hover:text-white transition-colors duration-300 flex justify-center items-center gap-2" data-id="${psy.id}">
+            <button class="open-modal-btn w-full py-3 text-primary font-bold bg-amber-50 rounded-xl hover:bg-primary hover:text-gray-900 transition-colors duration-300 flex justify-center items-center gap-2" data-id="${psy.id}">
               Marcar Consulta <i class="ph ph-calendar-plus text-xl"></i>
             </button>
           </div>
@@ -134,8 +128,8 @@ function renderTestimonials() {
   mockTestimonials.forEach(test => {
     html += `
       <div class="w-full flex-shrink-0 px-4">
-        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg shadow-blue-900/5 text-center">
-          <img src="${test.image}" alt="${test.name}" class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-4 border-blue-50">
+        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg shadow-amber-900/5 text-center">
+          <img src="${test.image}" alt="${test.name}" class="w-20 h-20 rounded-full mx-auto mb-6 object-cover border-4 border-amber-50">
           <p class="text-gray-600 italic text-lg md:text-xl mb-8 leading-relaxed">"${test.content}"</p>
           <h4 class="font-bold text-gray-900 text-lg">${test.name}</h4>
           <span class="text-primary text-sm font-medium">${test.role}</span>
