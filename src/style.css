@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #2563EB;
+  --color-secondary: #1D4ED8;
+  --color-bg: #FFFFFF;
+  --color-light-gray: #F8FAFC;
+  --color-text-main: #0F172A;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-text-main)] font-sans antialiased selection:bg-primary selection:text-white;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+  }
+  .glass-dark {
+    @apply bg-blue-900/40 backdrop-blur-lg border border-blue-400/20 shadow-xl;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400;
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-float-delayed {
+    animation: float 6s ease-in-out 3s infinite;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Custom styles for AOS (Animate On Scroll) compatibility if needed, though AOS handles itself */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Floating Shapes in Hero Background */
+.hero-shape {
+  position: absolute;
+  filter: blur(40px);
+  z-index: 0;
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: float 10s infinite alternate;
+}
